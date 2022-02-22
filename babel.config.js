@@ -2,13 +2,13 @@ module.exports = function babelConfig(api) {
   return {
     presets: [
       '@babel/preset-env',
-      {
+      /* {
         ...(api.env('test') && {
           targets: {
             node: 'current',
           },
         }),
-      },
+      }, */
     ],
     /* eslint-disable indent */
     plugins: [

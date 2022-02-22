@@ -14,11 +14,9 @@ export default function inRange(moment) {
    */
   return function (start, end) {
     if (start.gt(end)) {
-      throw Error(`Your 'start' date is after your 'end' date.`);
+      throw Error(`Your 'start' date is after your 'end' date`);
     }
-    return (
-      (!start || mClone.call(this).gte(start)) &&
-      (!end || mClone.call(this).lte(end))
-    );
+    const curr = mClone.call(this);
+    return curr.gte(start) && curr.lte(end);
   };
 }

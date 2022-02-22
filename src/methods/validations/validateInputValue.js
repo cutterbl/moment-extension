@@ -9,17 +9,18 @@ export default function validateInputValue(moment) {
    * returns a 'moment' if valid, or 'undefined'
    * @param {string} input - a string value to represent a date
    * @param {string} format - a string value representing a moment parser
-   * @param {string} [mask=' __'] - a string representing a value to replace from the current input
+   * @param {string} [maskChar='_'] - a string representing a value to replace from the current input
    * @returns {moment|undefined}
    */
-  return function (input, format, mask = ' __') {
+  return function (input, format, maskChar = '_') {
     if (!format) {
       throw Error(`[moment.validateInputValue] You did not supply a 'format'`);
     }
     if (!input) {
       return undefined;
     }
-    const value = input.replace(mask, '');
+    const maskRegEx = new RegExp(`[${maskChar}(?<=${maskChar}):]`, 'g');
+    const value = input.replace(maskRegEx, '').trim();
     return moment.isValidForFormat(value, format);
   };
 }

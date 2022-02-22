@@ -7,7 +7,7 @@ import { MONTHS } from '../../defaults';
  */
 export default function calendarDays(moment) {
   const mClone = moment.fn.clone;
-  const mRange = moment.fn.range;
+  const mRange = moment.range;
   /**
    * Returns an array of 'moment's representing all of the visible
    * calendar days of a month. Uses the existing 'this', but can

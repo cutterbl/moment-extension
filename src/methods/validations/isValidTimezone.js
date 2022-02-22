@@ -13,8 +13,8 @@ export default function isValidTimezone(moment, zoneName) {
   const result = moment.tz.zone.call(this, zoneName) !== null;
   if (!result) {
     // eslint-disable-next-line no-console
-    console.warn(
-      `You have attempted to set an invalid IANA timezone of '${zoneName}'.`
+    throw Error(
+      `You have attempted to set an invalid IANA timezone of '${zoneName}'`
     );
   }
   return result;

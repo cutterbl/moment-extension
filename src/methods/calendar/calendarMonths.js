@@ -7,7 +7,7 @@ import { units, YEAR, MONTH } from '../../defaults';
  */
 export default function calendarMonths(moment) {
   const mClone = moment.fn.clone;
-  const mRange = moment.fn.range;
+  const mRange = moment.range;
   /**
    * Returns an array of 'moment's representing all of the months
    * associated with a specific year. Uses the existing 'this', but can

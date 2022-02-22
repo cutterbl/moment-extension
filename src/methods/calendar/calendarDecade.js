@@ -7,7 +7,7 @@ import { DECADE, YEAR } from '../../defaults';
  */
 export default function calendarDecade(moment) {
   const mClone = moment.fn.clone;
-  const mRange = moment.fn.range;
+  const mRange = moment.range;
   /**
    * Returns an array of 'moment's representing all of the years
    * of a specific decade. Uses the existing 'this', but can
@@ -21,7 +21,7 @@ export default function calendarDecade(moment) {
       clone.year(year);
     }
     const start = clone.clone().startOf(DECADE);
-    const end = start.clone().endOf(DECADE);
+    const end = start.clone().endOf(DECADE).startOf(YEAR);
     return mRange.call(this, { start, end, unit: YEAR });
   };
 }

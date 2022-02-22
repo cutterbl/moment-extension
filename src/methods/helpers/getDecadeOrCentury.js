@@ -7,9 +7,9 @@ import unitIsDecadeOrCentury from './unitIsDecadeOrCentury';
  * @returns {string} unit ('decade'|'century')
  */
 export default function getDecadeOrCentury(date, unit) {
-  if (unitIsDecadeOrCentury(unit)) {
+  if (!unitIsDecadeOrCentury(unit)) {
     throw Error(
-      `[moment Extended getDecadeOrCentury] cannot be called with a unit of ${unit}`
+      `[moment Extended getDecadeOrCentury] cannot be called with a unit of '${unit}'`
     );
   }
   const isDecade = unit === DECADE;

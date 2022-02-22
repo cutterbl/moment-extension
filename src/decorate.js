@@ -68,7 +68,7 @@ export default function decorate(moment) {
   moment.fn.inRange = inRange(moment);
   moment.fn.firstVisibleDay = firstVisibleDay(moment);
   moment.fn.lastVisibleDay = lastVisibleDay(moment);
-  moment.fn.range = range;
+  moment.range = range;
   moment.fn.calendarDays = calendarDays(moment);
   moment.fn.calendarMonths = calendarMonths(moment);
   moment.fn.calendarDecade = calendarDecade(moment);

@@ -22,7 +22,7 @@ export default function isSameOrBefore(moment) {
       return mIsSameOrBefore.call(this, valB, unit);
     }
     return (
-      getDecadeOrCentury(mClone.call(this), unit) >=
+      getDecadeOrCentury(mClone.call(this), unit) <=
       getDecadeOrCentury(valB, unit)
     );
   };
