@@ -1,4 +1,11 @@
 Changelog
+### 0.0.3 (2022-02-22)
+
+
+### Bug Fixes
+
+* Release action ([00bc69d](https://github.com/cutterbl/moment-extension/commit/00bc69d290f8a9f9b5e9ad97c23888556693b63c))
+
 ### 0.0.2 (2022-02-22)
 
 
