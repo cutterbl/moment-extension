@@ -1,6 +1,10 @@
 # moment-extension
 
-This is a decorator for [MomentJs](https://momentjs.com), adding simple math support for 'decade' and 'century', method aliases for comparison methods, simple range methods, and more. There are no dependencies to this project. As a decorator, it requires you to give it `moment`, even if previously decorated in some way.
+This is a decorator for [MomentJs](https://momentjs.com), adding simple math support for 'decade' and 'century', method aliases for comparison methods, simple range methods, and more. 
+
+It is written for modern browsers, and does not include CommonJs support.
+
+There are no built-in dependencies to this project. As a decorator, it requires you to give it `moment`, even if previously decorated in some way.
 
 ## Install
 

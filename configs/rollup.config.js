@@ -1,6 +1,7 @@
 import path from 'path';
 import babel from '@rollup/plugin-babel';
 import eslint from '@rollup/plugin-eslint';
+import { uglify } from 'rollup-plugin-uglify';
 import clear from 'rollup-plugin-clear';
 import cleanup from 'rollup-plugin-cleanup';
 import pkg from '../package.json';
@@ -17,7 +18,7 @@ export default [
       {
         file: pkg.module,
         format: 'es',
-        sourcemap: true,
+        sourcemap: false,
         exports: 'named',
         interop: 'auto',
       },
@@ -35,6 +36,7 @@ export default [
         babelHelpers: 'runtime',
         exclude: [/node_modules/],
       }),
+      uglify(),
       cleanup(),
     ],
     external: externalDependencies,
