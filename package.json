@@ -30,7 +30,7 @@
     "build": "rollup -c ./.configs/rollup.config.js",
     "coverage": "is-ci || jest --coverage",
     "prepare": "is-ci || husky install",
-    "release": "standard-version",
+    "release": "standard-version -a",
     "shrinkwrap": "zx ./.scripts/shrinkwrap.mjs",
     "test": "jest"
   },
