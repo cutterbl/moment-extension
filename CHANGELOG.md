@@ -1,4 +1,11 @@
 Changelog
+### 0.0.7 (2022-02-23)
+
+
+### Features
+
+* Refine build ([07ea304](https://github.com/cutterbl/moment-extension/commit/07ea304bf3b05e3678b73466bb299f9599363b26))
+
 ### 0.0.6 (2022-02-23)
 
 ### 0.0.5 (2022-02-23)
