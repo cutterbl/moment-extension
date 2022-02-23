@@ -51,14 +51,6 @@ jobs:
       - name: Create the release
         run: yarn release
 
-      - name: Update Shrinkwrap for Version Bump
-        run: |
-          npm shrinkwrap
-          git add npm-shrinkwrap.json
-
-      - name: Push tag and file changes to repository
-        run: git push --follow-tags origin master
-
       - uses: JS-DevTools/npm-publish@v1
         with:
           access: 'public'
