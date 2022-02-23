@@ -1,4 +1,11 @@
 Changelog
+### 0.0.8 (2022-02-23)
+
+
+### Bug Fixes
+
+* Add all flag to release ([523b433](https://github.com/cutterbl/moment-extension/commit/523b4334e5c568df6b6cf6b7a2f259501ad1e786))
+
 ### 0.0.7 (2022-02-23)
 
 
