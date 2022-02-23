@@ -43,8 +43,7 @@
     "#"
   ],
   "scripts": {
-    "postbump": "npm shrinkwrap",
-    "precommit": "git add npm-shrinkwrap.json",
+    "precommit": "yarn shrinkwrap",
     "posttag": "git push --follow-tags origin master"
   }
 }
