@@ -43,6 +43,7 @@
     "#"
   ],
   "scripts": {
+    "pretag": "npm shrinkwrap && git add npm-shrinkwrap.json",
     "posttag": "git push --follow-tags origin master"
   }
 }

@@ -37,6 +37,9 @@ jobs:
       - name: Test 
         run: yarn test
 
+      - name: Build fresh for new package with updated version numbers
+        run: yarn build
+
       - name: Setup git creds
         env:
           config_email: ${{secrets.GIT_CONFIG_EMAIL}}
@@ -55,9 +58,6 @@ jobs:
 
       - name: Push tag and file changes to repository
         run: git push --follow-tags origin master
-
-      - name: Build fresh for new package with updated version numbers
-        run: yarn build
 
       - uses: JS-DevTools/npm-publish@v1
         with:
