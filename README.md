@@ -1,5 +1,7 @@
 # moment-extension
 
+[demos](https://codesandbox.io/s/moment-extension-tew8y1)
+
 This is a decorator for [MomentJs](https://momentjs.com), adding simple math support for 'decade' and 'century', method aliases for comparison methods, simple range methods, and more. 
 
 It is written for modern browsers, and does not include CommonJs support.
