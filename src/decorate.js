@@ -28,12 +28,14 @@ import validateInputValue from './methods/validations/validateInputValue';
  * @returns {Object} moment
  */
 export default function decorate(moment) {
+  let zoneName;
   /**
    * If moment-timezone is present, I always want the
    * zone info to be included in any moment I create
    */
   if (moment.tz) {
-    moment.tz.setDefault(moment.tz.guess());
+    zoneName = moment.tz.guess();
+    moment.tz.setDefault(zoneName);
   }
 
   const extended = function (...args) {
@@ -49,6 +51,7 @@ export default function decorate(moment) {
    * this to manage scope between what 'in' moment
    * and what's in our code here, at the same time.
    */
+  moment.currentIANAZoneName = zoneName;
   moment.normalizeUnits = normalizeUnits(moment);
   moment.fn.add = add(moment);
   moment.fn.subtract = subtract(moment);

@@ -77,6 +77,7 @@ We also provide some basic convenience method for use with calendar scenarios.
 These are only relevant if you're using [moment-timezone](https://momentjs.com/timezone/). A `moment` object doesn't contain `zone` information unless it was either created with `moment.tz()` or you've `moment.tz.setDefault(someZone)`. The decorator will immediately `setDefault(moment.tz.guess)`, so that all `moment`s will have this information. We've also made it easier to set your timezone.
 
 - `moment.setTimezone([zoneName|undefined])` If `undefined` is passed it will reset the default back to the `moment.tz.guess()`. If a `zoneName` is passed, and it is not a valid IANA timezone, it will throw an Error. **If you have not included `moment-timezone` then this will do nothing without error**
+- `moment.currentIANAZoneName` is a new property to access the current default IANA timezone name.
 
 Once called, this ensures that all future `moment`s are created using the supplied timezone. At an individual level this can still be overridden by using the `moment.tz(value, zoneName)` syntax.
 

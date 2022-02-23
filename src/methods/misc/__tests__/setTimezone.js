@@ -23,6 +23,14 @@ describe('setTimezone', function () {
     expect(Math.abs(second - third)).toBe(0);
   });
 
+  it(`should have an accessible 'currentIANAZoneName'`, async function () {
+    await import('moment-timezone');
+    const extended = decorate(moment);
+    expect(moment.currentIANAZoneName).toBe(moment.tz.guess());
+    extended.setTimezone('America/New_York');
+    expect(moment.currentIANAZoneName).toBe('America/New_York');
+  });
+
   it(`should throw an error if you try to set an invalid 'timezone'`, async function () {
     await import('moment-timezone');
     const extended = decorate(moment);

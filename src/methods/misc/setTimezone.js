@@ -15,6 +15,7 @@ export default function setTimezone(moment) {
   return function (value = moment?.tz?.guess?.()) {
     if (tz && isValidTimezone(moment, value)) {
       moment.tz.setDefault.call(this, value);
+      moment.currentIANAZoneName = value;
     }
   };
 }
