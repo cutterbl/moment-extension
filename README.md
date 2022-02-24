@@ -89,3 +89,10 @@ Some developers use `moment` for building out calendar or date/time picker contr
 
 - `moment.isValidForFormat(value:string, format:string) => moment|undefined` It the given `value` can be strictly parsed using the supplied `format` then it will return a moment. If it can not create a valid `moment` then it will return `undefined`. 
 - `moment.validateInputValue(value:string, format:string, [maskChar:string = '_']) => moment|undefined` This will safely strip the `input` of any `maskChar`s, then trim that value, the run it through `isValidForFormat`. If the `input` is incomplete (stripped `maskChar`s) then it will fail 'strict' `format` validation and return `undefined`. If the `input` is complete, but incorrect, it will also fail 'strict' `format` validation.
+
+## Support Us
+
+Did this help you? Help further our Open Source development and buy us a cup of coffee.
+
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/O4O1B4MH5)
