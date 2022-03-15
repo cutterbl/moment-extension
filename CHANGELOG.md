@@ -1,4 +1,11 @@
 Changelog
+### 0.0.12 (2022-03-15)
+
+
+### Bug Fixes
+
+* Correct mask stripping ([3736824](https://github.com/cutterbl/moment-extension/commit/3736824cf58967f57332e57d7ad9388c2239d5ea))
+
 ### 0.0.11 (2022-02-24)
 
 ### 0.0.10 (2022-02-23)
