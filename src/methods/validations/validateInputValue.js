@@ -24,7 +24,7 @@ export default function validateInputValue(moment) {
       .replace(maskRegEx, '') // strip out the mask char
       .replace(/:(?!\d)/g, '') // strip any ':' not followed by a number
       .replace(/\/(?!\d)/g, '') // strip any '/' not followed by a number
-      .trim(); // trim off the whitespace
+      .trim(); // trim off the whitespace from the end
     return moment.isValidForFormat(value, format);
   };
 }
