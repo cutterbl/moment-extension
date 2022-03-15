@@ -19,8 +19,12 @@ export default function validateInputValue(moment) {
     if (!input) {
       return undefined;
     }
-    const maskRegEx = new RegExp(`[${maskChar}(?<=${maskChar}):]`, 'g');
-    const value = input.replace(maskRegEx, '').trim();
+    const maskRegEx = new RegExp(maskChar, 'g');
+    const value = input
+      .replace(maskRegEx, '') // strip out the mask char
+      .replace(/:(?!\d)/g, '') // strip any ':' not followed by a number
+      .replace(/\/(?!\d)/g, '') // strip any '/' not followed by a number
+      .trim(); // trim off the whitespace
     return moment.isValidForFormat(value, format);
   };
 }
