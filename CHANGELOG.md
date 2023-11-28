@@ -1,4 +1,12 @@
 Changelog
+### [0.0.13](https://github.com/cutterbl/moment-extension/compare/v0.0.11...v0.0.13) (2023-11-28)
+
+
+### Bug Fixes
+
+* Correct mask stripping ([3736824](https://github.com/cutterbl/moment-extension/commit/3736824cf58967f57332e57d7ad9388c2239d5ea))
+* Push to branch to get it deployed ([#3](https://github.com/cutterbl/moment-extension/issues/3)) ([7d626e0](https://github.com/cutterbl/moment-extension/commit/7d626e02396c049150b9d8dbf62726b8ddd349f6))
+
 ### 0.0.12 (2022-03-15)
 
 
