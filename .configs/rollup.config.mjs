@@ -1,10 +1,13 @@
 import path from 'path';
 import babel from '@rollup/plugin-babel';
 import eslint from '@rollup/plugin-eslint';
-import { uglify } from 'rollup-plugin-uglify';
+import terser from '@rollup/plugin-terser';
 import clear from 'rollup-plugin-clear';
 import cleanup from 'rollup-plugin-cleanup';
-import pkg from '../package.json';
+import * as url from 'url';
+import pkg from '../package.json' assert { type: 'json' };
+
+const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
 const externalDependencies = Object.keys(pkg.dependencies).map((id) =>
   // must do this to  avoid compiling runtime's nested paths
@@ -36,7 +39,7 @@ export default [
         babelHelpers: 'runtime',
         exclude: [/node_modules/],
       }),
-      uglify(),
+      terser(),
       cleanup(),
     ],
     external: externalDependencies,
