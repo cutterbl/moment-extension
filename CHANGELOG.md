@@ -1,4 +1,11 @@
 Changelog
+## 0.1.2 (2024-06-19)
+
+
+### Bug Fixes
+
+* Get build right ([#7](https://github.com/cutterbl/moment-extension/issues/7)) ([6771cbd](https://github.com/cutterbl/moment-extension/commit/6771cbd1e4659ec4bf0f7d3ccc279ba43947454b))
+
 ## 0.1.1 (2024-06-19)
 
 
