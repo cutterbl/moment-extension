@@ -1,4 +1,15 @@
 Changelog
+## 0.1.0 (2024-06-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* Moves build to Vite and testing to Vitest. Export file names changed. Provides a UMD option. Updates all core dependencies.
+
+### Features
+
+* Move to Vite ([#4](https://github.com/cutterbl/moment-extension/issues/4)) ([644598d](https://github.com/cutterbl/moment-extension/commit/644598d6a4a6828197b34219cf6a4539b1df7b15))
+
 ### [0.0.13](https://github.com/cutterbl/moment-extension/compare/v0.0.11...v0.0.13) (2023-11-28)
 
 
