@@ -25,10 +25,10 @@
   ],
   "type": "module",
   "main": "./dist/moment-extension.umd.cjs",
-  "module": "./dist/moment-extension.mjs",
+  "module": "./dist/moment-extension.js",
   "exports": {
     ".": {
-      "import": "./dist/moment-extension.mjs",
+      "import": "./dist/moment-extension.js",
       "require": "./dist/moment-extension.umd.cjs"
     }
   },
