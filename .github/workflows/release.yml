@@ -34,15 +34,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
+          registry-url: https://registry.npmjs.org/
 
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
 
       - name: Test
         run: yarn test
-
-      - name: Build fresh for new package with updated version numbers
-        run: yarn build
 
       - name: Setup git creds
         env:
@@ -55,7 +53,11 @@ jobs:
       - name: Create the release
         run: yarn release
 
-      - uses: JS-DevTools/npm-publish@v1
+      - name: Build fresh for new package with updated version numbers
+        run: yarn build
+
+      - uses: JS-DevTools/npm-publish@v3
         with:
           access: 'public'
           token: ${{secrets.NPM_TOKEN}}
+          strategy: upgrade
