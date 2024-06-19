@@ -1,4 +1,3 @@
-/* Resolve */
 import normalizeUnits from './methods/helpers/normalizeUnits';
 import add from './methods/math/add';
 import subtract from './methods/math/subtract';
